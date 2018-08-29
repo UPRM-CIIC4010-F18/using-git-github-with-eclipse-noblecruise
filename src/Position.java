@@ -1,10 +1,10 @@
 
 public class Position {
-	private String positionCode; //Position Code
-	private int reqRank;//Rank required to be here
-	private double hSalary;//Position Salary
-	private boolean available;//Position Availability
-	private boolean jobType; //Full Time [True] Part Time [False];
+	private String positionCode;  //Position Code
+	private int reqRank;          //Rank required to be here
+	private double hSalary;       //Position Salary
+	private boolean available;    //Position Availability
+	private boolean jobType;      //Full Time [True] Part Time [False];
 	
 	public Position(String pCode, int rank, double salary, boolean availability, boolean jobType) {
 		setPositionCode(pCode);
@@ -68,8 +68,13 @@ public class Position {
 	public double getYearlySalary() {
 		
 		//Add Code Here [You have to use If/Else to get graded]
+		if(jobType){
+			return 40*hSalary*4.5*12;
+		}else{
+			return 20*hSalary*4.5*12;
+		}
 		
-		return 0; //Temporal Return
+		
 		
 	}
 }
